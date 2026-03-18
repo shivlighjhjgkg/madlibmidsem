@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000">
+
+    <!-- Ribbon/Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Sportyyyyy"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:background="#111111"
+        android:textStyle="bold"/>
+
+    <!-- List View -->
+    <ListView
+        android:id="@+id/sportsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#333333"
+        android:dividerHeight="1dp"/>
+
+</LinearLayout>

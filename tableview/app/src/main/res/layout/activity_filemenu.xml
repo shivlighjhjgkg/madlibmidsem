@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fileTable"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="10dp">
+
+    <!-- Open -->
+    <TableRow android:padding="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Open.."
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Ctrl + O"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:gravity="end" />
+    </TableRow>
+
+    <!-- Save -->
+    <TableRow android:padding="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Save.."
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Ctrl + S"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:gravity="end" />
+    </TableRow>
+
+    <!-- Save As -->
+    <TableRow android:padding="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Save As.."
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Ctrl + Shift + S"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:gravity="end" />
+    </TableRow>
+
+    <!-- Import -->
+    <TableRow android:padding="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Import.."
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Ctrl + I"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:gravity="end" />
+    </TableRow>
+
+    <!-- Export -->
+    <TableRow android:padding="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Export.."
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Ctrl + E"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:gravity="end" />
+    </TableRow>
+
+</TableLayout>

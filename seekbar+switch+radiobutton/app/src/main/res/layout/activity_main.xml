@@ -1,0 +1,58 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- RADIO BUTTON -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:text="Male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:text="Female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+
+    <!-- SEEKBAR -->
+    <TextView
+        android:id="@+id/textAge"
+        android:text="Age: 0"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:max="100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- SWITCH -->
+    <Switch
+        android:id="@+id/mySwitch"
+        android:text="Enable Notifications"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- BUTTON -->
+    <Button
+        android:id="@+id/btnSubmit"
+        android:text="Submit"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

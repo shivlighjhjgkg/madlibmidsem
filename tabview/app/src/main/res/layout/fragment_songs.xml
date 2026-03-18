@@ -1,0 +1,29 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    android:padding="10dp">
+
+    <TableRow>
+        <TextView
+            android:text="Song"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+
+        <TextView
+            android:text="Duration"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView android:text="Kesariya" android:padding="8dp"/>
+        <TextView android:text="3:40" android:padding="8dp"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView android:text="Tum Hi Ho" android:padding="8dp"/>
+        <TextView android:text="4:20" android:padding="8dp"/>
+    </TableRow>
+
+</TableLayout>

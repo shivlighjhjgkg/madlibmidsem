@@ -1,0 +1,50 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- SOURCE -->
+    <Spinner
+        android:id="@+id/spinnerSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- DESTINATION -->
+    <Spinner
+        android:id="@+id/spinnerDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- DATE PICKER -->
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- TOGGLE BUTTON -->
+    <ToggleButton
+        android:id="@+id/toggleTrip"
+        android:textOn="Round Trip"
+        android:textOff="One Way"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- BUTTONS -->
+    <Button
+        android:id="@+id/btnSubmit"
+        android:text="Submit"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnReset"
+        android:text="Reset"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

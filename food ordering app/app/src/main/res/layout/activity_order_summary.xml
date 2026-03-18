@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/bgDark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="🧾 Order Summary"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/orderText"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/totalText"
+        android:textColor="@color/accent"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnChangeOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Order"
+        android:backgroundTint="#FF4081"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

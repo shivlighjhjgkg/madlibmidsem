@@ -1,0 +1,8 @@
+<resources>
+    <color name="bgDark">#1E1E1E</color>
+    <color name="cardColor">#2C2C2C</color>
+    <color name="accent">#FF7043</color>
+    <color name="white">#FFFFFF</color>
+    <color name="cardBg">#2A2A2A</color>
+
+</resources>
