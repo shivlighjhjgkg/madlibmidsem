@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Digital Transformation</string>
+    <string name="desc_filter">Filter Options</string>
+    <string name="subtitle">Tap the filter icon (top-right) to Search, Highlight, or Sort</string>
+    <string name="article_title">Understanding Digital Transformation</string>
+</resources>

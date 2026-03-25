@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">XYZ Fitness Center</string>
+
+    <!-- Content Descriptions for ImageButtons -->
+    <string name="desc_open_menu">Open Menu</string>
+    <string name="desc_homepage">Homepage</string>
+    <string name="desc_about_us">About Us</string>
+    <string name="desc_contact_us">Contact Us</string>
+</resources>

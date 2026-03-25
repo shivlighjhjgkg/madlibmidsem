@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_workout"
+        android:title="Workout Plans"
+        android:icon="@drawable/ic_workout" />
+
+    <item
+        android:id="@+id/menu_trainers"
+        android:title="Trainers"
+        android:icon="@drawable/ic_trainer" />
+
+    <item
+        android:id="@+id/menu_membership"
+        android:title="Membership"
+        android:icon="@drawable/ic_membership" />
+
+</menu>

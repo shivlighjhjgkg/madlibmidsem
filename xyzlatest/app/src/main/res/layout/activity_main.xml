@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4F8">
+
+    <!-- ═══════════════════════════════════════════════════════
+         TOP APP BAR
+    ═══════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:background="#1A1A2E"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:elevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Hamburger / Options Menu Button -->
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_menu"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/desc_open_menu"
+            app:tint="#FFFFFF" />
+
+        <!-- App Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Spacer to balance hamburger -->
+        <View
+            android:layout_width="44dp"
+            android:layout_height="44dp" />
+
+    </LinearLayout>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SCROLLABLE CONTENT AREA
+    ═══════════════════════════════════════════════════════ -->
+    <ScrollView
+        android:id="@+id/scroll_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- ─────────────────────────────────────────────
+                 SECTION: HOME
+            ───────────────────────────────────────────── -->
+            <LinearLayout
+                android:id="@+id/section_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!-- Hero Banner -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="6dp"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#16213E"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="💪"
+                            android:textSize="48sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome to XYZ Fitness!"
+                            android:textColor="#FFFFFF"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_marginTop="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Transform Your Body. Transform Your Life."
+                            android:textColor="#E94560"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Quick Stats Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="16dp"
+                            android:background="#E94560">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="500+" android:textColor="#FFF" android:textSize="22sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Members" android:textColor="#FFF" android:textSize="12sp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="16dp"
+                            android:background="#0F3460">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="20+" android:textColor="#FFF" android:textSize="22sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Trainers" android:textColor="#FFF" android:textSize="12sp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="6dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="16dp"
+                            android:background="#1A1A2E">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="15+" android:textColor="#FFF" android:textSize="22sp" android:textStyle="bold"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Programs" android:textColor="#FFF" android:textSize="12sp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <!-- Info Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:background="#FFFFFF">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🏋️ Why Choose Us?"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#1A1A2E"
+                            android:layout_marginBottom="8dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✅  State-of-the-art equipment" android:textColor="#444" android:textSize="14sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✅  Certified personal trainers" android:textColor="#444" android:textSize="14sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✅  Flexible membership plans" android:textColor="#444" android:textSize="14sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✅  Open 24 / 7 – 365 days" android:textColor="#444" android:textSize="14sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- ─────────────────────────────────────────────
+                 SECTION: WORKOUT PLANS
+            ───────────────────────────────────────────── -->
+            <LinearLayout
+                android:id="@+id/section_workout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏃 Workout Plans"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A2E"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Card: Weight Loss -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:background="#FFFFFF">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🔥" android:textSize="36sp" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Weight Loss" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A2E"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Burn fat with HIIT, circuit training and cardio bursts. 4 sessions/week." android:textColor="#666" android:textSize="13sp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Duration: 8 Weeks  |  Level: Beginner–Intermediate"
+                                android:textColor="#E94560" android:textSize="12sp" android:layout_marginTop="4dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card: Cardio -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:background="#FFFFFF">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="💓" android:textSize="36sp" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Cardio Blast" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A2E"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Boost endurance with treadmill, cycling, and rowing. 5 sessions/week." android:textColor="#666" android:textSize="13sp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Duration: 6 Weeks  |  Level: All Levels"
+                                android:textColor="#E94560" android:textSize="12sp" android:layout_marginTop="4dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card: Strength -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:background="#FFFFFF">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🏋️" android:textSize="36sp" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Strength &amp; Muscle" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A2E"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Build lean muscle with progressive overload weight training. 4 sessions/week." android:textColor="#666" android:textSize="13sp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Duration: 12 Weeks  |  Level: Intermediate–Advanced"
+                                android:textColor="#E94560" android:textSize="12sp" android:layout_marginTop="4dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card: Yoga -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:background="#FFFFFF">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🧘" android:textSize="36sp" android:layout_marginEnd="12dp"/>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Yoga &amp; Flexibility" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A2E"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Improve flexibility, balance and mindfulness. 3 sessions/week." android:textColor="#666" android:textSize="13sp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Duration: 4 Weeks  |  Level: Beginner"
+                                android:textColor="#E94560" android:textSize="12sp" android:layout_marginTop="4dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- ─────────────────────────────────────────────
+                 SECTION: TRAINERS
+            ───────────────────────────────────────────── -->
+            <LinearLayout
+                android:id="@+id/section_trainers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👨‍🏫 Our Trainers"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A2E"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Trainer 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:background="#FFFFFF">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            app:cardCornerRadius="36dp"
+                            app:cardElevation="2dp"
+                            android:layout_marginEnd="16dp">
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                                android:background="#E94560" android:gravity="center">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="AK" android:textColor="#FFF" android:textSize="22sp" android:textStyle="bold"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center_vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Arjun Kumar" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A2E"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Specialization: Strength &amp; Conditioning" android:textColor="#E94560" android:textSize="13sp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Experience: 8 Years  |  ⭐ 4.9" android:textColor="#666" android:textSize="12sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Trainer 2 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:background="#FFFFFF">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            app:cardCornerRadius="36dp"
+                            app:cardElevation="2dp"
+                            android:layout_marginEnd="16dp">
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                                android:background="#0F3460" android:gravity="center">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="PS" android:textColor="#FFF" android:textSize="22sp" android:textStyle="bold"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center_vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Priya Sharma" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A2E"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Specialization: Yoga &amp; Pilates" android:textColor="#E94560" android:textSize="13sp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Experience: 6 Years  |  ⭐ 4.8" android:textColor="#666" android:textSize="12sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Trainer 3 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:background="#FFFFFF">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            app:cardCornerRadius="36dp"
+                            app:cardElevation="2dp"
+                            android:layout_marginEnd="16dp">
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                                android:background="#16213E" android:gravity="center">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="RV" android:textColor="#FFF" android:textSize="22sp" android:textStyle="bold"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center_vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Rahul Verma" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A2E"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Specialization: Cardio &amp; Weight Loss" android:textColor="#E94560" android:textSize="13sp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Experience: 5 Years  |  ⭐ 4.7" android:textColor="#666" android:textSize="12sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Trainer 4 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:background="#FFFFFF">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            app:cardCornerRadius="36dp"
+                            app:cardElevation="2dp"
+                            android:layout_marginEnd="16dp">
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                                android:background="#4CAF50" android:gravity="center">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="SN" android:textColor="#FFF" android:textSize="22sp" android:textStyle="bold"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1" android:orientation="vertical" android:gravity="center_vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Sneha Nair" android:textSize="16sp" android:textStyle="bold" android:textColor="#1A1A2E"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Specialization: Nutrition &amp; Diet" android:textColor="#E94560" android:textSize="13sp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="Experience: 7 Years  |  ⭐ 5.0" android:textColor="#666" android:textSize="12sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- ─────────────────────────────────────────────
+                 SECTION: MEMBERSHIP
+            ───────────────────────────────────────────── -->
+            <LinearLayout
+                android:id="@+id/section_membership"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💳 Membership Plans"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A1A2E"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Basic Plan -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:background="#FFFFFF">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1" android:text="🥉 BASIC" android:textSize="18sp"
+                                android:textStyle="bold" android:textColor="#1A1A2E"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="₹999/mo" android:textSize="20sp" android:textStyle="bold" android:textColor="#E94560"/>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                            android:background="#EEE" android:layout_marginTop="8dp" android:layout_marginBottom="8dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✔  Gym floor access" android:textColor="#444" android:textSize="13sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✔  Locker room access" android:textColor="#444" android:textSize="13sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✔  1 Group class/week" android:textColor="#444" android:textSize="13sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✘  Personal trainer sessions" android:textColor="#BBB" android:textSize="13sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Pro Plan -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:background="#E94560">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1" android:text="🥈 PRO  ⭐POPULAR" android:textSize="18sp"
+                                android:textStyle="bold" android:textColor="#FFF"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="₹1,999/mo" android:textSize="20sp" android:textStyle="bold" android:textColor="#FFF"/>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                            android:background="#FFFFFF55" android:layout_marginTop="8dp" android:layout_marginBottom="8dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✔  Everything in Basic" android:textColor="#FFF" android:textSize="13sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✔  Unlimited group classes" android:textColor="#FFF" android:textSize="13sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✔  2 PT sessions/month" android:textColor="#FFF" android:textSize="13sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✔  Diet &amp; nutrition consultation" android:textColor="#FFF" android:textSize="13sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Elite Plan -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:background="#1A1A2E">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1" android:text="🥇 ELITE" android:textSize="18sp"
+                                android:textStyle="bold" android:textColor="#FFD700"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="₹3,499/mo" android:textSize="20sp" android:textStyle="bold" android:textColor="#FFD700"/>
+                        </LinearLayout>
+                        <View android:layout_width="match_parent" android:layout_height="1dp"
+                            android:background="#FFFFFF33" android:layout_marginTop="8dp" android:layout_marginBottom="8dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✔  Everything in Pro" android:textColor="#CCC" android:textSize="13sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✔  Unlimited PT sessions" android:textColor="#CCC" android:textSize="13sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✔  Spa &amp; sauna access" android:textColor="#CCC" android:textSize="13sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="✔  Customised meal &amp; workout plan" android:textColor="#CCC" android:textSize="13sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- ─────────────────────────────────────────────
+                 SECTION: ABOUT US
+            ───────────────────────────────────────────── -->
+            <LinearLayout
+                android:id="@+id/section_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:background="#FFFFFF">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="ℹ️ About XYZ Fitness Center"
+                            android:textSize="20sp" android:textStyle="bold" android:textColor="#1A1A2E"
+                            android:layout_marginBottom="12dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Founded in 2010, XYZ Fitness Center has been the premier destination for health and wellness in the city. We believe that fitness is not just a hobby — it is a lifestyle."
+                            android:textColor="#555" android:textSize="14sp" android:lineSpacingExtra="4dp"
+                            android:layout_marginBottom="12dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Our Mission"
+                            android:textSize="16sp" android:textStyle="bold" android:textColor="#E94560"
+                            android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="To empower every individual with the tools, knowledge, and support they need to achieve their fitness goals — regardless of age, ability, or experience."
+                            android:textColor="#555" android:textSize="14sp" android:lineSpacingExtra="4dp"
+                            android:layout_marginBottom="12dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="🏆  Award-winning facility (2019, 2022, 2024)"
+                            android:textColor="#444" android:textSize="13sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="📍  Location: 45 Fitness Avenue, Health City"
+                            android:textColor="#444" android:textSize="13sp" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="🕐  Hours: Mon–Sun  5:00 AM – 11:00 PM"
+                            android:textColor="#444" android:textSize="13sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- ─────────────────────────────────────────────
+                 SECTION: CONTACT US
+            ───────────────────────────────────────────── -->
+            <LinearLayout
+                android:id="@+id/section_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:layout_marginBottom="12dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:background="#FFFFFF">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="📞 Contact Us"
+                            android:textSize="20sp" android:textStyle="bold" android:textColor="#1A1A2E"
+                            android:layout_marginBottom="16dp"/>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:layout_marginBottom="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="📞" android:textSize="22sp" android:layout_marginEnd="12dp"/>
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1" android:orientation="vertical">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="Phone" android:textStyle="bold" android:textColor="#1A1A2E" android:textSize="14sp"/>
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="+91 98765 43210" android:textColor="#E94560" android:textSize="14sp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:layout_marginBottom="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="✉️" android:textSize="22sp" android:layout_marginEnd="12dp"/>
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1" android:orientation="vertical">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="Email" android:textStyle="bold" android:textColor="#1A1A2E" android:textSize="14sp"/>
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="info@xyzfitness.com" android:textColor="#E94560" android:textSize="14sp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:layout_marginBottom="12dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="📍" android:textSize="22sp" android:layout_marginEnd="12dp"/>
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1" android:orientation="vertical">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="Address" android:textStyle="bold" android:textColor="#1A1A2E" android:textSize="14sp"/>
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="45 Fitness Avenue, Health City – 560001" android:textColor="#555" android:textSize="14sp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="🌐" android:textSize="22sp" android:layout_marginEnd="12dp"/>
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                                android:layout_weight="1" android:orientation="vertical">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="Website" android:textStyle="bold" android:textColor="#1A1A2E" android:textSize="14sp"/>
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                    android:text="www.xyzfitnesscenter.com" android:textColor="#E94560" android:textSize="14sp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Social Media Row -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:background="#FFFFFF">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Follow Us" android:textSize="16sp" android:textStyle="bold"
+                            android:textColor="#1A1A2E" android:layout_marginBottom="12dp"/>
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="horizontal" android:gravity="center">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="📘" android:textSize="32sp" android:layout_marginEnd="20dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="📸" android:textSize="32sp" android:layout_marginEnd="20dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="🐦" android:textSize="32sp" android:layout_marginEnd="20dp"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:text="▶️" android:textSize="32sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ═══════════════════════════════════════════════════════
+         BOTTOM NAVIGATION BAR  (Icon-only)
+    ═══════════════════════════════════════════════════════ -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:background="#1A1A2E"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Home Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/btn_icon_home"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_home"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="#FFFFFF"
+                android:contentDescription="@string/desc_homepage" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <!-- About Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/btn_icon_about"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_about"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="#FFFFFF"
+                android:contentDescription="@string/desc_about_us" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <!-- Contact Icon -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/btn_icon_contact"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_contact"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="#FFFFFF"
+                android:contentDescription="@string/desc_contact_us" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
