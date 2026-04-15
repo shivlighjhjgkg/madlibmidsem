@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Additional Details"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Department"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/spinner_dept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/departments"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Date of Birth"
+        android:layout_marginTop="16dp"/>
+
+    <DatePicker
+        android:id="@+id/date_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_save_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit and Store More Users"
+        android:layout_marginTop="24dp"/>
+
+    <Button
+        android:id="@+id/btn_move_ahead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit and Move Ahead"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

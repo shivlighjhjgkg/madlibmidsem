@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Movie Name" />
+
+    <EditText
+        android:id="@+id/editTextYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Year"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Rating (1-5)"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Review" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saved Movies (Click to view details):"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <ListView
+        android:id="@+id/listViewMovies"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Movie Details:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <TableLayout
+        android:id="@+id/tableLayoutDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:padding="8dp"
+        android:background="#EEEEEE"
+        android:layout_marginTop="8dp"
+        android:visibility="gone">
+        <TableRow android:padding="4dp">
+            <TextView android:text="Name: " android:textStyle="bold" android:paddingRight="10dp"/>
+            <TextView android:id="@+id/tableName" />
+        </TableRow>
+        <TableRow android:padding="4dp">
+            <TextView android:text="Year: " android:textStyle="bold" android:paddingRight="10dp"/>
+            <TextView android:id="@+id/tableYear" />
+        </TableRow>
+        <TableRow android:padding="4dp">
+            <TextView android:text="Rating: " android:textStyle="bold" android:paddingRight="10dp"/>
+            <TextView android:id="@+id/tableRating" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

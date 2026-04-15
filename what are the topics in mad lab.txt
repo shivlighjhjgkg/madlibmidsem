@@ -1,0 +1,62 @@
+what are the topics in mad lab 
+
+1. LAYOUTS 
+	a. Linear layout only + nested linear layout - a student registration form (vertical linear means everything stacked top->bottom and horizontal layout nested, want radio buttons side by side)
+	b. Relative layout - login page. wrap_content vs match_parent thing 
+	c. Constraint Layout - image+login page only kinda
+	d. linear + relative - food ordering app new 
+
+
+
+
+
+
+2. Listview - listview_toast 
+3. gridview - colors.xml theme.xml
+4. tableview
+5. tabview 
+
+zoom feature is there in the allbuttons thing
+
+scroll view is there in one of these you can use in case your date time picker go out of screen
+
+
+6. multiple buttons + image toast 
+7. vehicle parking question - spinner 
+8. travel booking - spinner + picker 
+9. movie booking - scroll view + spinner + date time picker both + toggle + button eabled conditionally 
+10. fitness center xyz - options menu + app bar/toolbar w trainer photos 
+
+
+11. system apps list -  contextual menu triggerd 
+12. lab7 w images - options menu has two options, on tap displays two different images
+13. searchingsorting ques - app bar + search sort + highlight 
+
+14. database basics - legit database basics 
+15. grocery list - db + spinner 
+16.moview reviw thingy, db + listview 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+📁 Android Resource Structure (Core Idea)
+
+Android separates things into different folders:
+
+Folder	Used For
+res/layout/	UI design (buttons, text fields, structure)
+res/values/	Data values (strings, colors, dimensions, arrays)
+🎯 So what goes in strings.xml?
+
+👉 Anything that is TEXT or DATA, not UI structure

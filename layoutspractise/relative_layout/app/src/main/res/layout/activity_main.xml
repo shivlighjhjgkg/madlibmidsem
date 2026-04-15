@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <!-- TITLE -->
+    <TextView
+        android:id="@+id/title"
+        android:text="Login"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- USERNAME -->
+    <EditText
+        android:id="@+id/username"
+        android:hint="Username"
+        android:layout_below="@id/title"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- PASSWORD -->
+    <EditText
+        android:id="@+id/password"
+        android:hint="Password"
+        android:layout_below="@id/username"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- FORGOT PASSWORD -->
+    <TextView
+        android:text="Forgot Password?"
+        android:layout_below="@id/password"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- LOGIN BUTTON -->
+    <Button
+        android:id="@+id/loginBtn"
+        android:text="Login"
+        android:layout_below="@id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- SIGN UP -->
+    <TextView
+        android:text="Sign Up"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

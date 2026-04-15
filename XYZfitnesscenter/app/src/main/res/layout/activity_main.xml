@@ -13,6 +13,7 @@
         app:titleTextColor="@android:color/white"
         app:title="XYZ Fitness" />
 
+    <!-- Default text display -->
     <TextView
         android:id="@+id/textContent"
         android:text="Welcome to XYZ Fitness Center"
@@ -20,5 +21,60 @@
         android:padding="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <!-- Trainers display (Hidden by default) -->
+    <LinearLayout
+        android:id="@+id/trainerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Our Trainers:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. John - Cardio Expert"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Sara - Yoga Trainer"
+                android:textSize="16sp"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
